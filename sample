@@ -1,0 +1,26 @@
+private ArrayList<Integer> results = new ArrayList<>();
+
+public int calculate(int firstNumber, String type, int secondNumber) {
+    int result = 0;
+
+    if (type.equals("+")) {
+        result = firstNumber + secondNumber;
+    } else if (type.equals("-")) {
+        result = firstNumber - secondNumber;
+    } else if (type.equals("*")) {
+        result = firstNumber * secondNumber;
+    } else if (type.equals("/")) {
+        if (secondNumber == 0) {
+            System.out.print("0으로 나눌 수 없습니다");
+            return 0;
+        } else {
+            result = firstNumber / secondNumber;
+        }
+    } else {
+        System.out.print("잘못된 연산입니다");
+        return 0;
+    }
+
+    results.add(result);
+    return result;
+}
