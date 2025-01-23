@@ -1,4 +1,4 @@
-package Solution_13;
+package solution_13;
 
 class Solution {
     public double solution(int[] arr) {
